@@ -1,0 +1,86 @@
+Key_Attribute_1,Value_Attribute,Result_Type
+American Airlines,127164.39,Average_Passengers_by_Airline
+Southwest Airlines,81188.16,Average_Passengers_by_Airline
+Virgin America,74405.35,Average_Passengers_by_Airline
+United Airlines,72732.06,Average_Passengers_by_Airline
+Delta Air Lines,68498.5,Average_Passengers_by_Airline
+US Airways,55317.82,Average_Passengers_by_Airline
+JetBlue Airways,35261.14,Average_Passengers_by_Airline
+SkyWest Airlines,27037.05,Average_Passengers_by_Airline
+Northwest Airlines,26109.25,Average_Passengers_by_Airline
+Compass Airlines,23358.56,Average_Passengers_by_Airline
+Lufthansa German Airlines,19301.97,Average_Passengers_by_Airline
+Air Canada,18251.56,Average_Passengers_by_Airline
+Frontier Airlines,17787.68,Average_Passengers_by_Airline
+British Airways,17625.12,Average_Passengers_by_Airline
+Alaska Airlines,17251.64,Average_Passengers_by_Airline
+Cathay Pacific,17121.33,Average_Passengers_by_Airline
+Singapore Airlines,14746.65,Average_Passengers_by_Airline
+EVA Airways,13116.36,Average_Passengers_by_Airline
+Air France,11589.08,Average_Passengers_by_Airline
+AirTran Airways,10569.24,Average_Passengers_by_Airline
+Philippine Airlines,10248.64,Average_Passengers_by_Airline
+China Airlines,9857.52,Average_Passengers_by_Airline
+Virgin Atlantic,9847.1,Average_Passengers_by_Airline
+KLM Royal Dutch Airlines,9221.81,Average_Passengers_by_Airline
+Emirates,9070.87,Average_Passengers_by_Airline
+ATA Airlines,8744.64,Average_Passengers_by_Airline
+Hawaiian Airlines,8282.19,Average_Passengers_by_Airline
+Turkish Airlines,8162.42,Average_Passengers_by_Airline
+Mexicana Airlines,7993.81,Average_Passengers_by_Airline
+Air New Zealand,7452.34,Average_Passengers_by_Airline
+Air China,6618.34,Average_Passengers_by_Airline
+Etihad Airways,6476.09,Average_Passengers_by_Airline
+Japan Airlines,6470.33,Average_Passengers_by_Airline
+Independence Air,6391.3,Average_Passengers_by_Airline
+All Nippon Airways,6385.52,Average_Passengers_by_Airline
+Swiss International,6061.64,Average_Passengers_by_Airline
+Asiana Airlines,5902.96,Average_Passengers_by_Airline
+SAS Airlines,5865.85,Average_Passengers_by_Airline
+Korean Air Lines,5678.46,Average_Passengers_by_Airline
+ExpressJet Airlines,5631.84,Average_Passengers_by_Airline
+Horizon Air,5577.58,Average_Passengers_by_Airline
+China Eastern,5498.4,Average_Passengers_by_Airline
+Aeromexico,5463.82,Average_Passengers_by_Airline
+WestJet Airlines,5338.16,Average_Passengers_by_Airline
+TACA,5066.2,Average_Passengers_by_Airline
+Qantas Airways,4991.22,Average_Passengers_by_Airline
+Aer Lingus,4407.18,Average_Passengers_by_Airline
+China Southern,4321.44,Average_Passengers_by_Airline
+Jet Airways,4280.31,Average_Passengers_by_Airline
+American Eagle Airlines,4006.53,Average_Passengers_by_Airline
+Sun Country Airlines,3992.65,Average_Passengers_by_Airline
+Midwest Airlines,3883.0,Average_Passengers_by_Airline
+Mesa Airlines,3710.58,Average_Passengers_by_Airline
+"COPA Airlines, Inc.",3418.07,Average_Passengers_by_Airline
+Spirit Airlines,2921.04,Average_Passengers_by_Airline
+Mesaba Airlines,2864.73,Average_Passengers_by_Airline
+Air India Limited,2834.5,Average_Passengers_by_Airline
+Icelandair,2799.7,Average_Passengers_by_Airline
+LAN Peru,2786.01,Average_Passengers_by_Airline
+Republic Airlines,2452.5,Average_Passengers_by_Airline
+Air Berlin,2320.75,Average_Passengers_by_Airline
+XL Airways France,2223.16,Average_Passengers_by_Airline
+Atlantic Southeast Airlines,2176.91,Average_Passengers_by_Airline
+Allegiant Air,1516.81,Average_Passengers_by_Airline
+BelAir Airlines,415.36,Average_Passengers_by_Airline
+Air Canada Jazz,294.21,Average_Passengers_by_Airline
+World Airways,261.67,Average_Passengers_by_Airline
+Swissport USA,258.6,Average_Passengers_by_Airline
+Pacific Aviation,160.0,Average_Passengers_by_Airline
+Miami Air International,107.38,Average_Passengers_by_Airline
+Servisair,90.06,Average_Passengers_by_Airline
+Xtra Airways,73.0,Average_Passengers_by_Airline
+"Atlas Air, Inc",34.0,Average_Passengers_by_Airline
+Boeing Company,18.0,Average_Passengers_by_Airline
+Ameriflight,5.0,Average_Passengers_by_Airline
+Evergreen International Airlines,2.0,Average_Passengers_by_Airline
+Asia,82017.0,Unique_Geo_Region
+Australia / Oceania,12973.0,Unique_Geo_Region
+Canada,39798.0,Unique_Geo_Region
+Central America,8970.0,Unique_Geo_Region
+Europe,48136.0,Unique_Geo_Region
+Mexico,29206.0,Unique_Geo_Region
+Middle East,14769.0,Unique_Geo_Region
+South America,3685.0,Unique_Geo_Region
+US,659837.0,Unique_Geo_Region
