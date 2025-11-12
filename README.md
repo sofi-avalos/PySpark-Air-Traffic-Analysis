@@ -1,73 +1,106 @@
-# ✈️ PySpark Air Traffic Analysis and Regression Modeling
+# ✈️ PySpark Air Traffic Analysis & Regression Modeling
 
-## Project Overview
+> Original project in **Spanish**, professionally translated into **English** for clarity and international standards.
 
-This project focuses on a comprehensive analysis of the "Air Traffic Passenger Statistics" dataset. The analysis leverages **PySpark** on **Google Colab** to handle large-scale data processing, perform rigorous Exploratory Data Analysis (EDA), conduct data cleaning and feature engineering, and apply advanced regression techniques.
+---
 
-The primary objective is to understand passenger traffic patterns and build predictive models (Decision Tree and Random Forest Regressors) to forecast passenger counts based on various operational and geographic features.
+## 📑 Table of Contents
+1. [Project Overview](#project-overview)  
+2. [Technologies & Environment](#technologies--environment)  
+3. [Project Structure](#project-structure)  
+4. [Execution Steps](#execution-steps)  
+5. [Key Analysis Highlights](#key-analysis-highlights)  
+   - [Data Ingestion & Initial EDA](#data-ingestion--initial-eda)  
+   - [Data Cleaning & Preparation](#data-cleaning--preparation)  
+   - [Statistical Analysis](#statistical-analysis)  
+   - [Feature Engineering & Correlation](#feature-engineering--correlation)  
+   - [Data Quality Assessment](#data-quality-assessment)  
+   - [Predictive Modeling](#predictive-modeling)  
+6. [Conclusion](#conclusion)
 
-### 📝 Important Note on Language Translation
+---
 
-**This project was originally developed in Spanish and has been professionally translated into English.** All variable names, comments, markdown, and output descriptions within the notebook reflect this English translation to ensure clarity and adherence to international coding standards.
+## 🧭 Project Overview
+This project performs a **comprehensive analysis** of the *Air Traffic Passenger Statistics* dataset using **PySpark** in Google Colab.  
 
-## 🛠️ Technologies and Environment
+It includes:  
+- Exploratory Data Analysis (EDA)  
+- Data Cleaning & Feature Engineering  
+- Advanced Regression Modeling (Decision Tree & Random Forest)  
 
-* **Platform:** Google Colab
-* **Core Library:** PySpark (for distributed data processing)
-* **Language:** Python
-* **Modeling:** PySpark MLlib (Decision Tree Regressor, Random Forest Regressor)
-* **Version Control:** GitHub
+**Objective:** Understand passenger traffic patterns and build predictive models to forecast passenger counts by operational and geographic features.
+
+> ⚠️ **Note:** Originally developed in Spanish; fully translated to English. All code, variable names, markdown, and outputs reflect the translation.
+
+---
+
+## 🛠️ Technologies & Environment
+- **Platform:** Google Colab (cloud-based Jupyter environment)  
+- **Core Library:** PySpark (distributed data processing)  
+- **Language:** Python  
+- **Modeling:** PySpark MLlib (Decision Tree, Random Forest Regressors)  
+- **Version Control:** GitHub  
+
+---
 
 ## 📂 Project Structure
+| File / Folder | Description |
+|---------------|-------------|
+| `notebooks/pyspark_air_traffic_analysis.ipynb` | Main notebook with all code, analysis, and modeling steps |
+| `data/` | Placeholder for input CSV (`Air_Traffic_Passenger_Statistics.csv`) from Google Drive |
+| `results/` | Exported CSV files with aggregated statistical results |
+| `README.md` | Project overview and instructions |
+| `.gitignore` | Files/folders excluded from GitHub |
 
-| File/Folder | Description |
-| :--- | :--- |
-| `pyspark_air_traffic_analysis.ipynb` | The main Jupyter Notebook containing all the code, analysis, and modeling steps. |
-| `/data` | **Placeholder for the input CSV data file.** (The original file is loaded from Google Drive). |
-| `/results` | Contains the final exported CSV with aggregated statistical results. |
-| `README.md` | This overview file. |
+---
 
-## 🚀 Execution Steps (How to Run the Analysis)
+## 🚀 Execution Steps
+1. **Open Colab:** Load `pyspark_air_traffic_analysis.ipynb`.  
+2. **Install PySpark:** The first cell installs PySpark automatically.  
+3. **Data Access:** Mount Google Drive and ensure `CSV_PATH` points to your dataset.  
+4. **Run All:** Execute all cells sequentially (**Runtime → Run all**).
 
-The project is designed to be executed entirely within a Google Colab environment.
+---
 
-1.  **Setup Colab:** Open the `pyspark_air_traffic_analysis.ipynb` file in Google Colab.
-2.  **Install PySpark:** The first cell automatically installs the necessary `PySpark` library.
-3.  **Data Access:** The notebook requires access to the input CSV file, `Air_Traffic_Passenger_Statistics.csv`, which is expected to be mounted from your **Google Drive**.
-    * **Crucial:** You must update the `CSV_PATH` variable in **Section 1** to point to the correct location of your dataset on your mounted Google Drive.
-4.  **Run:** Execute all cells sequentially (**Runtime** $\rightarrow$ **Run all**).
+## 📊 Key Analysis Highlights
 
-## 💡 Key Analysis Highlights
+### Data Ingestion & Initial EDA
+- Load dataset into Spark DataFrame; inspect schema and types.  
+- Count unique airlines and examine basic statistics for key carriers (Air China, Air Berlin).  
+- Aggregate total passengers by airline.
 
-The notebook covers the following major steps:
+### Data Cleaning & Preparation
+- Remove outdated entries (e.g., `"United Airlines - Pre 07/01/2013"`).  
+- Calculate **average passenger count** per airline.  
+- Deduplicate **GEO Region** records (retain max passengers).  
+- Export aggregated results (averages and unique regions) to CSV.
 
-### 1. Data Ingestion and EDA
-* Spark Session initialization and schema inference.
-* Counting unique airlines and filtering records for specific carriers (e.g., Air China, Air Berlin).
-* Aggregation of total passengers by operating airline.
+### Statistical Analysis
+- Compute **mean & standard deviation** of `Adjusted Passenger Count` by Year, Month, GEO Region, Terminal, Airline codes.  
+- Identify trends, seasonality, and traffic variability.
 
-### 2. Data Cleaning and Preparation
-* Filtering out inconsistent or outdated airline entries (e.g., "United Airlines - Pre 07/01/2013").
-* Calculation of the **average passenger count** per airline.
-* Deduplication of `GEO Region` records, retaining the entry with the maximum passenger count.
-* **Export of aggregated results** (Averages and Unique Geo Regions) to a combined CSV file.
+### Feature Engineering & Correlation
+- Encode categorical features (`Month`, `GEO Region`, `Terminal`, etc.) using `StringIndexer`.  
+- Compute Pearson correlation matrix to find top 10 strongest predictors of passenger traffic.
 
-### 3. Statistical Analysis
-* Calculation of **Mean and Standard Deviation** for `Adjusted Passenger Count` grouped by key categorical features (`Year`, `Month`, `GEO Region`, `Terminal`, `Airline` codes, etc.) to understand traffic variability.
+### Data Quality Assessment
+- Impute missing IATA codes using **mode** (most frequent value).  
+- Remove exact duplicates for accurate records.
 
-### 4. Feature Engineering and Correlation
-* Categorical features (`Month`, `GEO Region`, etc.) are converted to numerical indices using `StringIndexer`.
-* A **Pearson Correlation Matrix** is computed to identify the top 10 strongest linear relationships between the engineered features and the target variable.
+### Predictive Modeling
+- **Decision Tree Regressor:** Hyperparameter tuning (`maxDepth`, `minInstancesPerNode`).  
+- **Random Forest Regressor:** Hyperparameter tuning (`numTrees`, `maxDepth`).  
+- **Evaluation Metrics:** RMSE & R² on training and test sets.  
+- Random Forest generally outperforms Decision Tree, providing better predictive accuracy.
 
-### 5. Data Quality
-* Identification and imputation of missing values (`nulls`) in IATA code columns using the **mode** (most frequent value).
-* Final removal of exact duplicate rows.
+---
 
-### 6. Predictive Modeling (PySpark MLlib)
+## 🎯 Conclusion
+This project demonstrates a **full end-to-end pipeline** for air traffic passenger analysis and predictive modeling using PySpark:  
 
-The cleaned and prepared dataset is used to train and evaluate two regression models with the goal of predicting the `Adjusted Passenger Count`:
+- **Insights:** Passenger traffic patterns, seasonal trends, key predictors.  
+- **Predictive Power:** Models accurately forecast passenger counts; Random Forest provides the best fit.  
+- **Practical Use:** Supports operational planning, route optimization, and resource allocation in the airline industry.  
+- **Data Quality:** Highlights the importance of cleaning, deduplication, and feature engineering.
 
-| Model | Key Parameters | Performance Metric |
-| :--- | :--- | :--- |
-| **Decision Tree Regressor** | `maxDepth=10`, `minInstancesPerNode=50` | $R^2$ and RMSE |
-| **Random Forest Regressor** | `numTrees=100`, `maxDepth=15` | $R^2$ and RMSE |
+🏅 This project served as my **final assignment for the Big Data Master program at Tokio School**, achieving a **9/10 grade**.
